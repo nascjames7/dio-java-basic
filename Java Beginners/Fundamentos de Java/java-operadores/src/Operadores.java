@@ -52,5 +52,49 @@ public class Operadores {
         System.out.println(--valor);//decremento de 1.
         System.out.println(valor);
 
+        //Operador ternário: 
+        //<expressão condicional> ? <caso verdade> : <caso falso>.
+        int a, b;
+        a = 5;
+        b = 6;
+
+        //Sem operador ternário.
+        String resultado = "";
+
+        if(a == b){
+            resultado = "verdadeiro";
+
+        }else resultado = "falso";
+
+        System.out.println(resultado);
+
+        //Com operador ternário.
+        String resultadoOperadorTernarioString = (a == b) ? "verdadeiro" : "falso";
+        System.out.println(resultadoOperadorTernarioString);
+
+        int resultadoOperadorTernarioInteiro = (a == b) ? 1 : 0;
+        System.out.println(resultadoOperadorTernarioInteiro);
+
+        //Operadores relacionais.
+        int numero1 = 1;
+        int numero2 = 2;
+        
+        boolean simNao = (numero1 == numero2);//verifica se é igual
+        System.out.println("numeroUm é igual a numeroDois? " + simNao);
+
+        simNao = (numero1 != numero2);//verifica se é diferente
+        System.out.println("numeroUm é diferente a numeroDois? " + simNao);
+
+        simNao = (numero1 > numero2);//verifica se é maior
+        System.out.println("numeroUm é maior que numeroDois? " + simNao);
+
+        simNao = (numero1 < numero2);//verifica se é menor
+        System.out.println("numeroUm é menor que numeroDois? " + simNao);
+
+        //Trabalhando com objetos.
+        String nomeUm = "Anderson";
+        String nomeDois = new String("Anderson");//String não é um tipo primitivo
+        System.out.println(nomeUm.equals(nomeDois));//utilizar equals para verificar igualdade
+        
     }
 }
