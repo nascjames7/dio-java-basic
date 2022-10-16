@@ -95,6 +95,18 @@ public class Operadores {
         String nomeUm = "Anderson";
         String nomeDois = new String("Anderson");//String não é um tipo primitivo
         System.out.println(nomeUm.equals(nomeDois));//utilizar equals para verificar igualdade
-        
+
+        //Operadores lógicos.
+        boolean condicao1 = true;
+        boolean condicao2 = false;
+
+        if(condicao1 && condicao2){
+
+            System.out.println("As duas condições são verdadeiras.");
+        }
+        if(condicao1 || condicao2){
+
+            System.out.println("Uma das condições é verdadeiras.");
+        }
     }
 }
