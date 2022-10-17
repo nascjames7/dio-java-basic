@@ -34,8 +34,8 @@ public class IguadadeNumerica {
      * 
      * @param primeiroNumero este é o primeiro parametro do método.
      * @param segundoNumero este é o segundo parametro do método.
-     * @return String [O resultado deste método é uma mensagem 
-     * que depende da igualdade dos valores.]
+     * @return String (O resultado deste método é uma mensagem 
+     * que depende da igualdade dos valores.)
     */
 
     static private String compararNumeros(int primeiroNumero, int segundoNumero){
