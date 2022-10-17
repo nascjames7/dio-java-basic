@@ -1,6 +1,6 @@
 /**
 <h1>QuadradosPerfeitos</h1>
-* O QuadradosPerfeitos recebe um número natural N a calcula a menor 
+* O QuadradosPerfeitos recebe um número natural N e calcula a menor 
 * quantidade de quadrados perfeitos que somados atingem o valor de N .
 * <p>
 * <b>Nota:<b> Leia atentamente a documentação desta classe 
