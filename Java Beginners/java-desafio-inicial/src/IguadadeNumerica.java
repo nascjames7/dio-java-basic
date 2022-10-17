@@ -7,7 +7,7 @@
 * 
 * @author James Anderson
 * @version 1.0
-* @sinse 16/10/2022
+* @since 16/10/2022
 */
 
 import java.util.Scanner;
