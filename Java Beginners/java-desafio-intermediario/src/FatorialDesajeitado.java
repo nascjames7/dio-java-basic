@@ -10,7 +10,7 @@
 * 
 * @author James Anderson
 * @version 1.0
-* @since 17/10/2022
+* @since 18/10/2022
 */
 
 import java.util.*;
@@ -35,8 +35,10 @@ public class FatorialDesajeitado {
         int auxiliar2 = 0;
         int temp = 0;    
     
+        //Implementação da condição de parada do bloco.
         while(numeroNatural > 0){
 
+            //Declaração da variável que irá determinar a operação a ser realizada em cada etapa.
             int opcao = (contador%4);
 
             switch(opcao){
