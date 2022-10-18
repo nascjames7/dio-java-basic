@@ -26,18 +26,55 @@ public class FatorialDesajeitado {
          */
 
         int numeroNatural = Integer.parseInt(new Scanner(System.in).nextLine());
-        int resultado = 0;
+
+        //Declaraçaõ das variáveis resultado e contador.
+        int resultado = numeroNatural;
         int contador = 1;
-        int auxiliar = numeroNatural;
+        
         //numeroNatural--;
 
+        //Implementação da condição para execução do bloco.
         while (numeroNatural > 0) {
 
-            if(contador%4 == 1){
+            int opcao = contador%4;
 
-                resultado = (numeroNatural/)
+            switch(opcao){
+
+                case 1:                
+
+                resultado = resultado*(numeroNatural - 1);
+                contador++;                
+                numeroNatural--;
+                break;
+
+                case 2:                
+
+                resultado = resultado/(numeroNatural - 1);
+                contador++;                
+                numeroNatural--;
+                break;
+
+                case 3:                
+
+                resultado = resultado+(numeroNatural - 1);
+                contador++;                
+                numeroNatural--;
+                break;
+
+                case 0:                
+
+                resultado = resultado-(numeroNatural - 1);
+                contador++;                
+                numeroNatural--;
+                break;
+                
+                default:
+
+                System.out.println("Algo não está certo!");
             }
-            
+
+            contador = 1;      
+                     
         }
         System.out.println(resultado);        
     }
