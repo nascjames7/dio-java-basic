@@ -27,55 +27,122 @@ public class FatorialDesajeitado {
 
         int numeroNatural = Integer.parseInt(new Scanner(System.in).nextLine());
 
-        //Declaraçaõ das variáveis resultado e contador.
+        //Declaração das variáveis auxiliares, resultado e contadores.
         int resultado = numeroNatural;
-        int contador = 1;
-        
-        //numeroNatural--;
+        numeroNatural--;
+        int contador = 1; 
+        int auxiliar = 0;
+        int auxiliar2 = 0;
+        int temp = 0;    
+    
+        while(numeroNatural > 0){
 
-        //Implementação da condição para execução do bloco.
-        while (numeroNatural > 0) {
-
-            int opcao = contador%4;
+            int opcao = (contador%4);
 
             switch(opcao){
 
-                case 1:                
+                case 1:
 
-                resultado = resultado*(numeroNatural - 1);
-                contador++;                
+                if(contador == 1){
+
+                    resultado = resultado*numeroNatural;
+                    numeroNatural--;
+                    contador++;
+                    //System.out.println("contador: " + contador);
+                    //System.out.println("resultado: " + resultado);
+                    //System.out.println("numeroNatural: " + numeroNatural);
+                    break;            
+
+                }else{
+
+                    auxiliar2 = numeroNatural;
+
+                    if(numeroNatural == 1){
+
+                        resultado = temp + ((-auxiliar)*(auxiliar2));
+                        numeroNatural--;
+                        contador++;
+                        //System.out.println("contador: " + contador);
+                        //System.out.println("resultado: " + resultado);
+                        //System.out.println("numeroNatural: " + numeroNatural);
+                        break;
+                    }
+                    numeroNatural--;
+                    contador++;
+                    //System.out.println("contador: " + contador);
+                    //System.out.println("temp: " + temp);
+                    //System.out.println("auxiliar2: " + auxiliar2);
+                    //System.out.println("numeroNatural: " + numeroNatural);
+                    break;
+                }
+
+                case 2:
+
+                if(contador == 2){                    
+
+                    resultado = resultado/numeroNatural;
+                    numeroNatural--;
+                    contador++;
+                    //System.out.println("contador: " + contador);
+                    //System.out.println("resultado: " + resultado);
+                    //System.out.println("numeroNatural: " + numeroNatural);
+                    break;                                        
+
+                }else{               
+
+                    resultado = temp + ((-auxiliar)*(auxiliar2)/(numeroNatural));
+                    numeroNatural--;
+                    contador++;
+                    //System.out.println("contador: " + contador);
+                    //System.out.println("resultado: " + resultado);
+                    //System.out.println("numeroNatural: " + numeroNatural);
+                    break;                    
+                    
+                }
+
+                case 3:
+
+                resultado = resultado+numeroNatural;
+                temp = resultado;
                 numeroNatural--;
+                contador++;
+                //System.out.println("contador: " + contador);
+                //System.out.println("resultado: " + resultado);
+                //System.out.println("temp: " + temp);
+                //System.out.println("numeroNatural: " + numeroNatural);
                 break;
 
-                case 2:                
+                case 0:
 
-                resultado = resultado/(numeroNatural - 1);
-                contador++;                
-                numeroNatural--;
-                break;
+                if(numeroNatural == 1){
 
-                case 3:                
+                    resultado = resultado-numeroNatural;
+                    numeroNatural--;
+                    contador++;
+                    //System.out.println("contador: " + contador);
+                    //System.out.println("resultado: " + resultado);
+                    //System.out.println("numeroNatural: " + numeroNatural);
+                    break;
 
-                resultado = resultado+(numeroNatural - 1);
-                contador++;                
-                numeroNatural--;
-                break;
+                }else{
 
-                case 0:                
+                    
+                    auxiliar = numeroNatural;
+                    numeroNatural--;
+                    contador++;
+                    //System.out.println("contador: " + contador);
+                    //System.out.println("temp: " + temp);
+                    //System.out.println("auxiliar: " + auxiliar);
+                    //System.out.println("numeroNatural: " + numeroNatural);
+                    break;
+                }
 
-                resultado = resultado-(numeroNatural - 1);
-                contador++;                
-                numeroNatural--;
-                break;
-                
                 default:
 
-                System.out.println("Algo não está certo!");
-            }
-
-            contador = 1;      
-                     
-        }
+                System.out.println("Alguma coisa saiu errada!");
+            }   
+        }     
+        
         System.out.println(resultado);        
     }
     
