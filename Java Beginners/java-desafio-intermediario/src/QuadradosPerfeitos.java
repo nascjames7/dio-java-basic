@@ -63,6 +63,7 @@ public class QuadradosPerfeitos {
         //Declaração de variáveis de contagem, auxiliar e soma.
         int soma = 0;
         int auxiliar = 0;
+        int auxiliar2 = 0;
         int contador1 = 0;
         int contador2 = 0;
 
@@ -78,13 +79,25 @@ public class QuadradosPerfeitos {
                 //System.out.println("contador1: " + contador1);
                 
                 if(soma > numeroNatural){
-                    
+
+                    auxiliar2 = soma - (int)quadradosPerfeitos[posicao - 1];
+
+                    if(auxiliar2 == numeroNatural){
+
+                        soma = auxiliar2;
+                        contador1++;
+
+                    }else{
+
                     auxiliar = soma - (int)quadradosPerfeitos[posicao];
-                    //System.out.println("auxiliar: " + auxiliar);
+                    //System.out.println("auxiliar: " + auxiliar);                    
                     soma = auxiliar;
                     //System.out.println("soma: " + soma);
                     contador2++;
                     //System.out.println("contador2: " + contador2);
+
+                    }                    
+                    
                 }
             }             
         }
